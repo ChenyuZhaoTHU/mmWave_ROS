@@ -21,7 +21,10 @@ git clone https://github.com/wjwwood/serial.git
 4. Go back to `<workspace dir>`:
 
 ```
-catkin_make && source devel/setup.bash
+First, open the CMakeLists.txt at /catkin_ws/src/ti_mmwave_rospkg
+change the line add_definitions(-std=c++11) to add_definitions(-std=c++14)
+Then,
+catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3 && source devel/setup.bash
 echo "source <workspace_dir>/devel/setup.bash" >> ~/.bashrc
 ```
 
@@ -32,9 +35,9 @@ sudo chmod 666 /dev/ttyACM1
 ```
 Note: If multiple sensors are used, enable additional ports `/dev/ttyACM2` and `/dev/ttyACM3`, etc. the same as this step.
 
-6. Launch AWR1642 short range config:
+6. Launch IWR1843 config:
 ```
-roslaunch ti_mmwave_rospkg 1642es2_short_range.launch
+roslaunch ti_mmwave_rospkg iwr1843_withcfg.launch
 ```
 
 Note: If you want to build your own config, use [mmWave Demo Visualizer](https://dev.ti.com/mmwavedemovisualizer) and link the launch file to the config.
