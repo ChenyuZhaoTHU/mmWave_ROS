@@ -19,11 +19,11 @@ git clone https://github.com/radar-lab/ti_mmwave_rospkg.git
 git clone https://github.com/wjwwood/serial.git
 ```
 4. Go back to `<workspace dir>`:
-
-```
 First, open the CMakeLists.txt at /catkin_ws/src/ti_mmwave_rospkg
 change the line add_definitions(-std=c++11) to add_definitions(-std=c++14)
 Then,
+```
+
 catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3 && source devel/setup.bash
 echo "source <workspace_dir>/devel/setup.bash" >> ~/.bashrc
 ```
