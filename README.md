@@ -12,15 +12,14 @@ Note: Tested with Ubuntu 16.04 LTS with ROS Kinectic and Ubuntu 18.04 LTS with [
 Note:
 AWR1642 ES1.0 (usually purchased before May 2018) uses SDK 1.2. AWR1642 ES2.0 (usually purchased after May 2018) uses SDK 2.0. Same applies to AWR1443. (You can refer to [this thread](https://e2e.ti.com/support/sensors/f/1023/t/692195?tisearch=e2e-sitesearch&keymatch=%20user:356347))
 
-3. Clone this repo and ROS serial onto your `<workspace dir>/src`:
+3. Clone this repo and ROS serial onto your project folder:
 
 ```
-git clone https://github.com/radar-lab/ti_mmwave_rospkg.git
-git clone https://github.com/wjwwood/serial.git
+git clone https://github.com/ChenyuZhaoTHU/mmWave_ROS.git)
 ```
 4. First, open the CMakeLists.txt at /catkin_ws/src/ti_mmwave_rospkg
 change the line add_definitions(-std=c++11) to add_definitions(-std=c++14)
-Then, Go back to `<workspace dir>`:
+Then, Go into `mmWave_ROS`:
 
 ```
 catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3 && source devel/setup.bash
